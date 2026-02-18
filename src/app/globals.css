@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #0d9488;
+  --primary-dark: #0f766e;
+  --primary-light: #14b8a6;
+}
+
+body {
+  background-color: #f0fdfa;
+  min-height: 100vh;
+}
+
+@layer components {
+  .card-shadow {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .btn-primary {
+    @apply bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 px-8 rounded-xl
+      transition-all duration-300 ease-in-out transform hover:scale-105 active:scale-95;
+  }
+
+  .glass-card {
+    @apply bg-white/90 backdrop-blur-sm rounded-2xl card-shadow;
+  }
+}
